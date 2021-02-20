@@ -25,7 +25,7 @@ The kafka broker from the newly build container does not have any message yet. L
 ```shell
 cat John.person \
 | protoc --encode=Person Person.proto \
-| kafkacat -b localhost:9092 -t Person
+| kafkacat -b localhost:9092 -t Person -D ""
 ```
 We are done. Open your browser and navigate to `localhost:9000` to browse the message.
 ### Running the JAR instead
